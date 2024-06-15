@@ -1,0 +1,322 @@
+/* 기본 스타일 설정 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 컨테이너 스타일 */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sidebar form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.sidebar form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.sidebar form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar form button:hover {
+  background-color: #0056b3;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+}
+
+.day {
+  margin-bottom: 20px;
+}
+
+.day h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-routine {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+.routines-list {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.routine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.routine:last-child {
+  border-bottom: none;
+}
+
+.routine input[type="text"] {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  padding: 0;
+}
+
+.routine input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.routine button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.routine button:hover {
+  background-color: #c82333;
+}
+
+.btn-reset {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+  background-color: #cc0000;
+}
+
+.btn-logout {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #0056b3;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 모바일 장치 대응을 위한 미디어 쿼리 */
+@media (max-width: 800px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .sidebar {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+  .main-content {
+      width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+  .input-group {
+      flex-direction: column;
+  }
+  .input-routine {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+  .btn-add {
+      width: 100%;
+  }
+  .routines-list {
+      max-height: 50vh;
+      overflow-y: scroll;
+  }
+}
+
+/* 로그인 및 레지스터 페이지 스타일 */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 2px solid #e9ecef;
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.auth-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #0056b3;
+}
+
+.auth-container a {
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+}
+
